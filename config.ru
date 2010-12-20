@@ -2,5 +2,5 @@ require 'rubygems'
 require 'sinatra'
 
 require 'myapp'
-run Sinatra::Application
+run Sinatra.application
 
