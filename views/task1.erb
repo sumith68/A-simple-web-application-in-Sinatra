@@ -1,0 +1,36 @@
+<h1> Welcome User</h1>
+<table border="0" width="700">
+ <tbody>
+  <tr>
+   <td><b>Task</b></td>
+   <td><b>Status</b></td>
+   <td><b>Deadline</b></td>
+   <td><b>Assignsto</b></td>
+  </tr>
+<%
+        for collect in @collect do
+%>
+<form action="/updation" method="post">
+ <tr>
+   <td><label for="title"><%= collect.title %> </label></td>
+   <td><select name="cmbstatus">
+       <option value="current"><%= collect.status %></option>
+
+       <option value="open">open</option>
+       <option value="working"> working</option>
+       <option value="closed">closed</option>
+
+   </select></td>
+   <td><label  for="deadline" ><%= collect.deadline %> </label></td>
+   <td><label  for="assignsto"><%= collect.assignsto %></label></td>
+    <input type="hidden" name="h_id" value="<%= collect.id %>" />
+    <td><input type="submit" value="update" /></td>
+ </tr>
+</form>
+<%
+end
+%>
+</tbody>
+</table>
+
+

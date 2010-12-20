@@ -1,0 +1,30 @@
+<h1> Welcome manager</h1>
+<form action ="/create" method="post" >
+<table border="0" width=700>
+ <tbody>
+  <tr>
+   <td><b>Task</b></td>
+   <td><b>Deadline</b></td>
+   <td><b>Assignsto</b></td>
+  </tr>
+  
+  <tr>
+  
+   <td><input type="text" name="title"/></td>
+   <td><input type="text" name="deadline" /></td>
+   <td><select name="emp_name">
+         <% for i in @id do %>
+             <option value="<%= i %>"> <%= i %> </option>
+
+         <% end %>
+
+          </select>
+   </td>
+
+  </tr>
+  <tr>
+   <td> <input type="submit" value="submit"></td>
+  </tr>
+</tbody>
+</form>
+

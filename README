@@ -1,0 +1,19 @@
+A Simple web Appliction in Sinatra
+===================================
+The intended use of this application is for a manager to assign tasks to each of his employee. Each employee can update the status (open, working or closed) on the tasks assigned to him/her, which can be later verified by the manager. The application has two sections: employee section and managerial section. The latter is protected using basic HTTP authentication. 
+Run the application using the command 
+ ruby myapp.rb
+
+username and password for basic HTTP authentication:
+ username:admin
+ password:admin
+username and password for manager:
+ 
+ username:admin
+ password:admin
+ 
+The limitations :
+
+1. Provide only the basic authentication mechanisms.
+2. In this only one manager can assign task to resources.
+
